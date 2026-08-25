@@ -1,7 +1,7 @@
 {
-  "version": "2.16",
-  "code": 21,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v2.16/NexusDrive-v2.16.apk",
+  "version": "2.17",
+  "code": 23,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v2.17/NexusDrive-v2.17.apk",
   "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "Verificação de atualização, desbloqueio no seu tempo e app mais rápido"
+  "notes": "Formulário de nova inspiração consertado · estilo pagamento · conta gotas na paleta · importar backup"
 }
