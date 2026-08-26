@@ -1,7 +1,7 @@
 {
-  "version": "2.17",
-  "code": 23,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v2.17/NexusDrive-v2.17.apk",
+  "version": "2.19",
+  "code": 24,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v2.19/NexusDrive-v2.19.apk",
   "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "Formulário de nova inspiração consertado · estilo pagamento · conta gotas na paleta · importar backup"
+  "notes": "Novo visual do cofre · 50 itens no plano · Nexus Premium · painel de armazenamento real · importar backup"
 }
