@@ -1,0 +1,22 @@
+{
+  "creator": {
+    "username": "nexusproducer",
+    "name": "Nexus Producer",
+    "verified": true
+  },
+  "packs": [
+    {
+      "id": "sfx-glow-1",
+      "name": "SFX Glow Pack",
+      "type": "sfx",
+      "by": "nexusproducer",
+      "emoji": "",
+      "subtitle": "2 presets · 1 fonte · 1 SFX",
+      "price": 0,
+      "isNew": true,
+      "downloads": 0,
+      "packUrl": "",
+      "items": []
+    }
+  ]
+}
