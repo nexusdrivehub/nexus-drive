@@ -1,7 +1,7 @@
 {
-  "version": "2.19",
-  "code": 24,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v2.19/NexusDrive-v2.19.apk",
+  "version": "3.0.2",
+  "code": 32,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.2/NexusDrive-v3.0.2.apk",
   "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "Novo visual do cofre · 50 itens no plano · Nexus Premium · painel de armazenamento real · importar backup"
+  "notes": "Loja premium (dark + light) · cards no estilo 50+ SFX Pack · badges, preços e CTAs · visual alinhado ao Nexus Store Admin"
 }
