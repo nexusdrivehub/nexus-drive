@@ -1,7 +1,7 @@
 {
-  "version": "3.0.2",
-  "code": 41,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.2-b44/NexusDrive-v3.0.2-b44.apk",
+  "version": "3.0.5",
+  "code": 44,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.5/NexusDrive-v3.0.5.apk",
   "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "v3.0.2-b44 (build 41) · correções de PIN e janela de importação da Home · chips de categoria e botão de importar"
+  "notes": "v3.0.5 · importar .zip (kit), importar XML (raízes ampliadas), 'importar aqui' aceita tudo"
 }
