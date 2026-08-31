@@ -1,7 +1,7 @@
 {
   "version": "3.0.2",
-  "code": 32,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.2/NexusDrive-v3.0.2.apk",
+  "code": 41,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.2-b44/NexusDrive-v3.0.2-b44.apk",
   "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "Loja premium (dark + light) · cards no estilo 50+ SFX Pack · badges, preços e CTAs · visual alinhado ao Nexus Store Admin"
+  "notes": "v3.0.2-b44 (build 41) · correções de PIN e janela de importação da Home · chips de categoria e botão de importar"
 }
