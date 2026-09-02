@@ -1,7 +1,7 @@
 {
-  "version": "3.0.5",
-  "code": 44,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.5/NexusDrive-v3.0.5.apk",
+  "version": "3.0.21",
+  "code": 60,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.21/NexusDrive-v3.0.21.apk",
   "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "v3.0.5 · importar .zip (kit), importar XML (raízes ampliadas), 'importar aqui' aceita tudo"
+  "notes": "v3.0.21 · importação corrigida: XML e .zip não abrem mais o seletor de áudio; e 'importar aqui' / filtro 'tudo' agora abre o seletor completo (aceita qualquer arquivo, inclusive PDF). Causa: accept vazio virava '*/*' (mídia) no Android; agora accept vazio = sem filtro (todos os arquivos), e o tipo é conferido depois pelo ndKindedImport."
 }
