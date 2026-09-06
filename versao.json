@@ -1,7 +1,7 @@
 {
   "version": "3.0.78",
   "versionCode": 118,
-  "apkUrl": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.78/NexusDrive-v3.0.78-FINAL.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/",
   "apkSize": 291360,
   "changelog": [
     "Corrigido erro de instalação 'problema ao analisar o pacote'",
