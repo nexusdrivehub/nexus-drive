@@ -1,7 +1,17 @@
 {
-  "version": "3.0.21",
-  "code": 60,
-  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.21/NexusDrive-v3.0.21.apk",
-  "landing": "https://nexusdrivehub.github.io/nexus-drive/",
-  "notes": "v3.0.21 · importação corrigida: XML e .zip não abrem mais o seletor de áudio; e 'importar aqui' / filtro 'tudo' agora abre o seletor completo (aceita qualquer arquivo, inclusive PDF). Causa: accept vazio virava '*/*' (mídia) no Android; agora accept vazio = sem filtro (todos os arquivos), e o tipo é conferido depois pelo ndKindedImport."
+  "version": "3.0.78",
+  "versionCode": 118,
+  "apkUrl": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.78/NexusDrive-v3.0.78-FINAL.apk",
+  "apkSize": 291360,
+  "changelog": [
+    "Corrigido erro de instalação 'problema ao analisar o pacote'",
+    "Corrigido tela preta ao abrir o app",
+    "Corrigido arquivos importados não aparecendo",
+    "Seção 'Recentes' renomeada para 'IMPORTADOS', com 6 itens + Ver mais",
+    "Novos imports vão direto para a raiz, sem pasta padrão",
+    "Armazenamento em disco melhorado para projetos e mídias grandes"
+  ],
+  "minApi": 24,
+  "releasedAt": "2026-09-06T04:00:00-03:00",
+  "apkSha256": "57531e31dd0a8c4977640ba3b226f2031baacb9f9cb51152fe9cf8a33c5b10"
 }
