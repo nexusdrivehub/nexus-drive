@@ -6,32 +6,6 @@
   },
   "packs": [
     {
-      "id": "sfx-glow-1",
-      "name": "Ultimate Creator Pack",
-      "subtitle": "Ultimate Creator Resource Pack",
-      "type": "preset",
-      "emoji": "ð¦",
-      "price": 13,
-      "isNew": true,
-      "by": "nexusproducer",
-      "downloads": 0,
-      "packUrl": "",
-      "thumb": "",
-      "items": [],
-      "files": [],
-      "hook": "top1",
-      "cta": "Garantir",
-      "metaMode": "dl",
-      "metaText": "",
-      "rating": 0,
-      "reviews": 0,
-      "usedBy": 0,
-      "dlOverride": 75,
-      "licensesLeft": 0,
-      "deadline": "",
-      "pro": false
-    },
-    {
       "id": "pk_mtf4rps0",
       "name": "Apple UI Style",
       "subtitle": "Mais vendido da semana",
@@ -55,7 +29,9 @@
       "dlOverride": 175,
       "licensesLeft": 0,
       "deadline": "",
-      "pro": false
+      "pro": false,
+      "status": "published",
+      "scheduledAt": null
     },
     {
       "id": "pk_mtqp86rr",
@@ -81,7 +57,9 @@
       "dlOverride": 0,
       "licensesLeft": 200,
       "deadline": "",
-      "pro": false
+      "pro": false,
+      "status": "published",
+      "scheduledAt": null
     },
     {
       "id": "pk_mtqs8mi4",
@@ -108,7 +86,9 @@
       "dlOverride": 0,
       "licensesLeft": 0,
       "deadline": "",
-      "pro": false
+      "pro": false,
+      "status": "published",
+      "scheduledAt": null
     }
   ]
 }
