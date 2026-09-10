@@ -1,17 +1,17 @@
 {
-  "version": "3.0.78",
-  "versionCode": 118,
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/",
-  "apkSize": 291360,
+  "version": "3.0.123",
+  "versionCode": 164,
+  "url": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.123/NexusDrive-v3.0.123-google.apk",
+  "apkUrl": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.123/NexusDrive-v3.0.123-google.apk",
+  "apkSize": 594583,
+  "apkSha256": "cac5310f81674172a6d68d8b82082c16794a84d5a825eeb93c1906774fc867a1",
   "changelog": [
-    "Corrigido erro de instalação 'problema ao analisar o pacote'",
-    "Corrigido tela preta ao abrir o app",
-    "Corrigido arquivos importados não aparecendo",
-    "Seção 'Recentes' renomeada para 'IMPORTADOS', com 6 itens + Ver mais",
-    "Novos imports vão direto para a raiz, sem pasta padrão",
-    "Armazenamento em disco melhorado para projetos e mídias grandes"
+    "Login com Google no perfil",
+    "Plano gratuito: 50 itens, 30 pastas, 25 capas, 30 pastas de fontes",
+    "Exportar backup só no Nexus Premium",
+    "Nexus Premium a R$ 14,90/mês (cobrança real quando a Stripe liberar)"
   ],
+  "notes": "Google login, limites do plano gratuito e backup no Premium.",
   "minApi": 24,
-  "releasedAt": "2026-09-06T04:00:00-03:00",
-  "apkSha256": "57531e31dd0a8c4977640ba3b226f2031baacb9f9cb51152fe9cf8a33c5b10"
+  "releasedAt": "2026-09-10T18:00:00-03:00"
 }
