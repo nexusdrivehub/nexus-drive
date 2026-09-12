@@ -1,16 +1,9 @@
 {
-  "version": "3.0.125",
-  "versionCode": 166,
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.125-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.125-google.apk",
+  "version": "3.0.126",
+  "versionCode": 167,
+  "notes": "Atualizar agora abre a tela Instalar do Android.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.126-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.126-google.apk",
   "apkSize": 594535,
-  "apkSha256": "3bc97d49b12c0d625cc81aa2e2d4b8fe4e50e68f2dc487673649354b648ca4ea",
-  "changelog": [
-    "Plano gratuito: 20 pastas de projeto na Home",
-    "Barra de abas na largura toda",
-    "Ajuda com Premium, Loja e toque nas linhas"
-  ],
-  "notes": "Teto grátis: 20 pastas de projeto, 30 pastas de fontes, 50 itens, 25 capas.",
-  "minApi": 24,
-  "releasedAt": "2026-09-12T13:45:00-03:00"
+  "apkSha256": "bca9c3e4e5c33f968c13d97ad41b4285102eae695790ed9111911294718f850d"
 }
