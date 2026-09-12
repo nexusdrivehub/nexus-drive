@@ -1,17 +1,16 @@
 {
-  "version": "3.0.123",
-  "versionCode": 164,
+  "version": "3.0.125",
+  "versionCode": 166,
   "url": "https://nexusdrivehub.github.io/nexus-drive/",
-  "apkUrl": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.123/NexusDrive-v3.0.123-google.apk",
-  "apkSize": 594583,
-  "apkSha256": "cac5310f81674172a6d68d8b82082c16794a84d5a825eeb93c1906774fc867a1",
+  "apkUrl": "https://github.com/nexusdrivehub/nexus-drive/releases/download/v3.0.123/NexusDrive-v3.0.125-google.apk",
+  "apkSize": 594535,
+  "apkSha256": "3bc97d49b12c0d625cc81aa2e2d4b8fe4e50e68f2dc487673649354b648ca4ea",
   "changelog": [
-    "Login com Google no perfil",
-    "Plano gratuito: 50 itens, 30 pastas, 25 capas, 30 pastas de fontes",
-    "Exportar backup só no Nexus Premium",
-    "Nexus Premium a R$ 14,90/mês (cobrança real quando a Stripe liberar)"
+    "Plano gratuito: 20 pastas de projeto na Home",
+    "Barra de abas na largura toda",
+    "Ajuda com Premium, Loja e toque nas linhas"
   ],
-  "notes": "Google login, limites do plano gratuito e backup no Premium.",
+  "notes": "Teto grátis: 20 pastas de projeto, 30 pastas de fontes, 50 itens, 25 capas.",
   "minApi": 24,
-  "releasedAt": "2026-09-10T18:00:00-03:00"
+  "releasedAt": "2026-09-12T13:45:00-03:00"
 }
