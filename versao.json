@@ -1,9 +1,9 @@
 {
-  "version": "3.0.126",
-  "versionCode": 167,
-  "notes": "Atualizar agora abre a tela Instalar do Android.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.126-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.126-google.apk",
-  "apkSize": 594535,
-  "apkSha256": "bca9c3e4e5c33f968c13d97ad41b4285102eae695790ed9111911294718f850d"
+  "version": "3.0.144",
+  "versionCode": 185,
+  "notes": "Abas instantaneas, Home sem tela preta. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.144-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.144-google.apk",
+  "apkSize": 631399,
+  "apkSha256": "81fb16d3a78e48fb191fd42da65ee6d24f4fa1d3de30b85a60b0b8ef889005b9"
 }
