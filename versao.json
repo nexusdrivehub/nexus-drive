@@ -1,9 +1,9 @@
 {
-  "version": "3.0.146",
-  "versionCode": 187,
-  "notes": "Botao Instalar na atualizacao. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.146-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.146-google.apk",
+  "version": "3.0.147",
+  "versionCode": 188,
+  "notes": "Premium via Stripe. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.147-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.147-google.apk",
   "apkSize": 631399,
-  "apkSha256": "9bbe083b2c5cbc207da8d254ff63100926e8d5dbaf17b924771ac5573c92e329"
+  "apkSha256": "463f88a6403a17d958dcce498e45ca84ea296c3f03241145532fd5f9f0f0c1a6"
 }
