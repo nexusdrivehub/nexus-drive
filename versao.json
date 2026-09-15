@@ -1,9 +1,9 @@
 {
-  "version": "3.0.147",
-  "versionCode": 188,
-  "notes": "Premium via Stripe. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.147-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.147-google.apk",
-  "apkSize": 631399,
-  "apkSha256": "463f88a6403a17d958dcce498e45ca84ea296c3f03241145532fd5f9f0f0c1a6"
+  "version": "3.0.150",
+  "versionCode": 191,
+  "notes": "Google Drive: XML, audio, video e fontes. Premium so apos pagamento. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.150-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.150-google.apk",
+  "apkSize": 635495,
+  "apkSha256": "792e43a3ebc9b92fcc202b31e53b2bc7dd8d5ba1eb74ba1b3e4335ab6793c588"
 }
