@@ -1,9 +1,9 @@
 {
-  "version": "3.0.150",
-  "versionCode": 191,
-  "notes": "Google Drive: XML, audio, video e fontes. Premium so apos pagamento. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.150-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.150-google.apk",
+  "version": "3.0.153",
+  "versionCode": 194,
+  "notes": "Drive: atualiza arquivo existente, sem duplicar. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.153-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.153-google.apk",
   "apkSize": 635495,
-  "apkSha256": "792e43a3ebc9b92fcc202b31e53b2bc7dd8d5ba1eb74ba1b3e4335ab6793c588"
+  "apkSha256": "0ce41ac9abcdbadfc924ac827bace6651fb12ef63830092cd2633d0a376cf208"
 }
