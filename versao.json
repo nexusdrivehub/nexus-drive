@@ -1,9 +1,9 @@
 {
-  "version": "3.0.153",
-  "versionCode": 194,
-  "notes": "Drive: atualiza arquivo existente, sem duplicar. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.153-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.153-google.apk",
+  "version": "3.0.157",
+  "versionCode": 198,
+  "notes": "Gerenciar assinatura so no Premium ativo. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.157-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.157-google.apk",
   "apkSize": 635495,
-  "apkSha256": "0ce41ac9abcdbadfc924ac827bace6651fb12ef63830092cd2633d0a376cf208"
+  "apkSha256": "3ab928ad71c4ffb8c8cf3e8b47306d1a3d2ff79ab69569c657478eaaa19f4104"
 }
