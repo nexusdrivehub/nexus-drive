@@ -1,9 +1,9 @@
 {
-  "version": "3.0.162",
-  "versionCode": 203,
-  "notes": "Fotos nos cards Premium. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.162-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.162-google.apk",
+  "version": "3.0.166",
+  "versionCode": 207,
+  "notes": "Nome no compartilhar igual ao Bom dia. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.166-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.166-google.apk",
   "apkSize": 959457,
-  "apkSha256": "ba090431fb33a008402d00b75b2e3f85d5d49aeb59f127028f9cb5cf41d6b4d6"
+  "apkSha256": "f86acea5a8e3966b786a3d9cc07c2cb587b3e2f2e5aa4cd99069c786da5c8178"
 }
