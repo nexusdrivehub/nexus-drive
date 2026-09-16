@@ -1,9 +1,9 @@
 {
-  "version": "3.0.158",
-  "versionCode": 199,
-  "notes": "Texto do Premium ativo. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.158-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.158-google.apk",
-  "apkSize": 635495,
-  "apkSha256": "717498ee0dc24476e1b9b92cd9017d6f319890535793f25518f61546a7000a7d"
+  "version": "3.0.162",
+  "versionCode": 203,
+  "notes": "Fotos nos cards Premium. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.162-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.162-google.apk",
+  "apkSize": 959457,
+  "apkSha256": "ba090431fb33a008402d00b75b2e3f85d5d49aeb59f127028f9cb5cf41d6b4d6"
 }
