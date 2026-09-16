@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src *; base-uri 'none'; form-action 'none';">
+<title>Nexus Drive — Compartilhamento</title>
+<style>
+  :root{
+    --bg:#0b0c0e;
+    --card:#17181c;
+    --card-2:#1f2025;
+    --line:#282a30;
+    --text:#f2f2f4;
+    --text-dim:#9a9ba3;
+    --text-faint:#6b6c74;
+    --blue:#5aa6f5;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+      radial-gradient(120% 90% at 50% 0%, #142238 0%, #0b0c0e 55%);
+    background-size:32px 32px, 32px 32px, 100% 100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:48px 20px 40px;
+  }
+
+  .brand{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+  .brand .mark{
+    width:30px; height:30px; border-radius:9px;
+    background:var(--blue);
+    display:flex; align-items:center; justify-content:center;
+    color:#04121f; font-size:15px; font-weight:800;
+  }
+  .brand span{ font-size:15px; font-weight:700; color:var(--text); }
+
+  .tagline{ font-size:12px; color:var(--text-faint); text-align:center; margin-bottom:26px; }
+
+  .icon-wrap{
+    width:72px; height:72px; border-radius:20px;
+    background:var(--card-2);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px;
+    box-shadow:0 0 0 1px var(--line);
+  }
+  .icon-wrap svg{ width:34px; height:34px; }
+
+  h1{
+    font-size:20px; font-weight:800; text-align:center;
+    max-width:330px; line-height:1.35; margin-bottom:8px;
+  }
+  h1 .name{ color:var(--blue); }
+
+  .preview-card{
+    width:100%; max-width:340px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:16px;
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:30px;
+    position:relative;
+    z-index:1;
+  }
+  .preview-icon{
+    width:52px; height:52px; border-radius:14px;
+    background:linear-gradient(135deg, #1b3a5c, #142230);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .preview-icon svg{ width:24px; height:24px; }
+  .preview-name{ font-size:15px; font-weight:700; }
+  .preview-meta{ font-size:12.5px; color:var(--text-dim); margin-top:2px; }
+
+  .cta{
+    width:100%; max-width:340px;
+    background:var(--blue);
+    color:#04121f;
+    font-weight:700;
+    font-size:15.5px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    margin-bottom:10px;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    cursor:pointer;
+  }
+  .cta:disabled, .cta.disabled{ opacity:.5; pointer-events:none; }
+
+  .badges{ display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:8px; }
+  .badge{
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:11px; color:var(--text-dim);
+    background:var(--card-2); border:1px solid var(--line);
+    padding:4px 10px; border-radius:20px;
+  }
+  .badge svg{ width:11px; height:11px; }
+
+  .security-note{ font-size:11.5px; color:var(--text-faint); text-align:center; margin-bottom:28px; }
+
+  .steps{ width:100%; max-width:340px; display:flex; flex-direction:column; gap:10px; }
+  .step{ display:flex; align-items:center; gap:12px; font-size:12.5px; color:var(--text-dim); }
+  .step .num{
+    width:20px; height:20px; border-radius:50%;
+    background:var(--card-2); color:var(--text-dim);
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:700; flex-shrink:0;
+  }
+
+  .footer{ margin-top:auto; padding-top:40px; font-size:11.5px; color:var(--text-faint); text-align:center; }
+
+  .scale-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background:rgba(90,166,245,.10);
+    border:1px solid rgba(90,166,245,.25);
+    color:var(--blue);
+    font-size:11.5px; font-weight:700;
+    padding:5px 11px; border-radius:20px;
+    margin-bottom:16px;
+  }
+
+  .stack{ position:relative; width:100%; max-width:340px; margin-bottom:14px; }
+  .stack .ghost{
+    position:absolute; left:50%; height:100%;
+    border-radius:18px; background:var(--card); border:1px solid var(--line);
+  }
+  .stack .ghost1{ width:94%; top:-8px; transform:translateX(-50%); opacity:.55; }
+  .stack .ghost2{ width:88%; top:-16px; transform:translateX(-50%); opacity:.3; }
+
+  .compare{ width:100%; max-width:340px; display:flex; flex-direction:column; gap:8px; margin-bottom:22px; }
+  .compare .row{ display:flex; gap:9px; align-items:flex-start; font-size:12.5px; line-height:1.4; }
+  .compare .mark{ display:inline-flex; align-items:center; margin-top:1px; flex-shrink:0; }
+  .compare .lose{ color:var(--text-faint); }
+  .compare .gain{ color:var(--text); }
+  .compare b{ font-weight:700; }
+
+  .benefit-banner{
+    width:100%; max-width:340px;
+    background:rgba(90,166,245,.08);
+    border:1px solid rgba(90,166,245,.3);
+    border-radius:12px; padding:11px 14px;
+    font-size:12.5px; color:var(--text); text-align:center; line-height:1.4;
+    margin-bottom:14px;
+  }
+  .benefit-banner b{ color:var(--blue); }
+
+  .weak-link{
+    display:block; text-align:center; font-size:12px; color:var(--text-faint);
+    text-decoration:underline; margin-bottom:34px; cursor:pointer; background:none; border:none;
+  }
+
+  .app-preview{ width:100%; max-width:340px; margin-bottom:26px; }
+  .app-preview-label{ font-size:11px; color:var(--text-faint); text-align:center; margin-bottom:10px; }
+  .mini-device{ background:#000; border-radius:20px; padding:8px; box-shadow:0 20px 40px -12px rgba(0,0,0,.6), 0 0 0 1px #1c1d22; }
+  .mini-screen{ background:var(--bg); border-radius:14px; padding:14px 12px; overflow:hidden; }
+  .mini-topbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+  .mini-topbar b{ font-size:13px; }
+  .mini-topbar .dots{ display:flex; gap:4px; }
+  .mini-topbar .dots span{ width:5px; height:5px; border-radius:50%; background:var(--card-2); }
+  .mini-search{ background:var(--card-2); border-radius:8px; height:22px; margin-bottom:10px; }
+  .mini-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; }
+  .mini-folder{ background:var(--card); border-radius:8px; aspect-ratio:1; display:flex; align-items:center; justify-content:center; }
+  .mini-folder svg{ width:16px; height:16px; }
+
+  /* ---- estados de carregamento / erro ---- */
+  .skel{
+    background:linear-gradient(90deg, var(--card) 25%, #24262c 50%, var(--card) 75%);
+    background-size:200% 100%;
+    animation:shimmer 1.4s ease-in-out infinite;
+    border-radius:8px; color:transparent !important;
+  }
+  @keyframes shimmer{ 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+
+  .error-box{
+    width:100%; max-width:340px;
+    background:var(--card); border:1px solid #4a2a26;
+    border-radius:14px; padding:16px; text-align:center;
+    margin-bottom:20px; display:none;
+  }
+  .error-box p{ font-size:13px; color:var(--text-dim); line-height:1.5; }
+  body.state-error .hide-on-error{ display:none !important; }
+  body.state-error .error-box{ display:block; }
+</style>
+</head>
+<body>
+
+  <div class="brand">
+    <div class="mark">N</div>
+    <span>Nexus Drive</span>
+  </div>
+  <div class="tagline">Organizador de projetos pra quem edita vídeo</div>
+
+  <div class="icon-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#5aa6f5" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>
+  </div>
+
+  <h1 class="hide-on-error"><span class="name" id="senderName">Alguém</span>&nbsp;<span id="h1Rest">compartilhou um projeto com você</span></h1>
+
+  <div class="scale-badge hide-on-error" id="scaleBadge" style="display:none;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#5aa6f5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>
+    <span id="scaleText"></span>
+  </div>
+
+  <div class="stack hide-on-error">
+    <div class="ghost ghost2"></div>
+    <div class="ghost ghost1"></div>
+    <div class="preview-card" style="margin-bottom:0;">
+      <div class="preview-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#5aa6f5" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>
+      </div>
+      <div>
+        <div class="preview-name skel" id="itemName">Carregando…</div>
+        <div class="preview-meta skel" id="itemMeta">Carregando…</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="error-box">
+    <p id="errorMsg">Esse link de compartilhamento não existe mais ou expirou. Peça pra pessoa compartilhar de novo.</p>
+  </div>
+
+  <div class="compare hide-on-error">
+    <div class="row lose"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#e0715a" stroke-width="1.8" stroke-linecap="round" style="width:16px;height:16px;"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span> <span>Sem o app, você só abre esse 1 arquivo</span></div>
+    <div class="row gain"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#3ecf6d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg></span> <span>Com o app, você organiza <b>os seus</b> projetos do mesmo jeito, de graça</span></div>
+  </div>
+
+  <div class="benefit-banner hide-on-error">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#5aa6f5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;vertical-align:-3px;margin-right:5px;"><rect x="3" y="9" width="18" height="4" rx="1"/><path d="M12 9v12M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><path d="M12 9c-1.5-4-6-5-6-2 0 1.5 1.5 2 3 2h3ZM12 9c1.5-4 6-5 6-2 0 1.5-1.5 2-3 2h-3Z"/></svg>Baixe agora e ganhe <b>50 itens grátis</b> pra organizar os seus, além do que essa pessoa te mandou
+  </div>
+
+  <div class="app-preview hide-on-error">
+    <div class="app-preview-label">É assim que fica dentro do app</div>
+    <div class="mini-device">
+      <div class="mini-screen">
+        <div class="mini-topbar"><b>Projetos</b><div class="dots"><span></span><span></span><span></span></div></div>
+        <div class="mini-search"></div>
+        <div class="mini-grid">
+          <div class="mini-folder"><svg viewBox="0 0 24 24" fill="none" stroke="#5aa6f5" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></div>
+          <div class="mini-folder"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b74d" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></div>
+          <div class="mini-folder"><svg viewBox="0 0 24 24" fill="none" stroke="#3ecf6d" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></div>
+          <div class="mini-folder"><svg viewBox="0 0 24 24" fill="none" stroke="#e0715a" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></div>
+          <div class="mini-folder"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></div>
+          <div class="mini-folder"><svg viewBox="0 0 24 24" fill="none" stroke="#4dd0e1" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="cta" id="ctaBtn" href="#">Ver o que essa pessoa te mandou</a>
+
+  <div class="badges">
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#3ecf6d" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Grátis</div>
+    <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg> Android</div>
+  </div>
+  <div class="security-note">Instalação direta e segura · sem anúncios ocultos</div>
+
+  <button class="weak-link hide-on-error" id="weakLinkBtn">prefiro só abrir esse arquivo</button>
+
+  <div class="steps hide-on-error">
+    <div class="step"><div class="num">1</div> Baixe e instale o Nexus Drive</div>
+    <div class="step"><div class="num">2</div> Volte nesse link (ou escaneie o QR de novo)</div>
+    <div class="step"><div class="num">3</div> O projeto importa automaticamente</div>
+  </div>
+
+  <div class="footer">nexusdrivehub.github.io</div>
+
+<script>
+/* ======================================================================
+   CONFIGURAÇÃO — a IA de desenvolvimento só precisa preencher isto aqui.
+   Nada abaixo dessa seção deveria precisar mudar pra essa página
+   funcionar com dados reais.
+   ====================================================================== */
+const CONFIG = {
+  // Endpoint que devolve os dados do compartilhamento em JSON.
+  // Sugestão: uma rota nova no próprio Worker nexusdrive-pay, tipo:
+  //   GET https://nexusdrive-pay.genialphonk.workers.dev/share/<id>
+  // Resposta esperada (200):
+  //   {
+  //     "senderName": "Marina",
+  //     "senderProjectCount": 47,      // opcional — omite o badge de escala se ausente
+  //     "itemName": "Thumbnails · Setembro",
+  //     "itemCount": 12,
+  //     "itemSizeMB": 8.4,
+  //     "driveFileId": "abc123"        // usado só pra montar o link de import, nunca um token
+  //   }
+  // Resposta esperada se o ID não existir/expirou: HTTP 404, qualquer corpo.
+  // IMPORTANTE DE SEGURANÇA: essa resposta NUNCA deve incluir token de
+  // acesso ao Google Drive, e-mail completo de quem compartilhou, ou
+  // qualquer outro dado que não seja estritamente necessário pra exibir
+  // a tela. O ideal é a rota devolver só um link de Drive já com
+  // permissão "qualquer um com o link pode ver", nunca uma credencial.
+  API_BASE: "https://nexusdrive-pay.genialphonk.workers.dev/share",
+
+  // Link de fallback pra quem não tem o app instalado (Releases, ou a
+  // hospedagem nova que for decidida).
+  APK_DOWNLOAD_URL: "https://nexusdrivehub.github.io/nexus-drive/",
+
+  // Usados pra montar o "Android Intent" que tenta abrir o app e cai no
+  // fallback acima se não tiver instalado — não exige configurar
+  // Android App Links/assetlinks.json pra funcionar, é mais simples.
+  APP_SCHEME: "nexusdrive",
+  APP_PACKAGE: "com.nexusdrive.app"
+};
+/* ====================================================================== */
+
+(function(){
+  "use strict";
+
+  // --- 1. Pega e valida o ID do compartilhamento da URL ---
+  // Regra de segurança: só aceita letras, números, hífen e underscore,
+  // com tamanho razoável. Qualquer outra coisa é tratada como inválida
+  // ANTES de tentar buscar — evita que alguém injete algo estranho na
+  // URL da requisição (ex: ../, espaços, aspas, etc).
+  const params = new URLSearchParams(window.location.search);
+  const rawId = params.get("id") || params.get("share") || "";
+  const idIsValid = /^[a-zA-Z0-9_-]{3,64}$/.test(rawId);
+  const isDemo = params.get("demo") === "1";
+
+  function showError(message){
+    document.body.classList.add("state-error");
+    if (message) {
+      // textContent, nunca innerHTML, pra qualquer mensagem de erro
+      document.getElementById("errorMsg").textContent = message;
+    }
+  }
+
+  function escapeForAttribute(str){
+    // Usado só quando um valor precisa virar parte de uma URL (query
+    // string), nunca pra exibir texto na tela (isso usa textContent).
+    return encodeURIComponent(str);
+  }
+
+  function buildAppIntentUrl(shareId){
+    // Intent URL padrão do Android: tenta abrir o app com o scheme
+    // customizado; se o app não estiver instalado, o próprio Android
+    // cai automaticamente no S.browser_fallback_url.
+    const deepPath = `import?share=${escapeForAttribute(shareId)}`;
+    const fallback = escapeForAttribute(CONFIG.APK_DOWNLOAD_URL);
+    return `intent://${deepPath}#Intent;scheme=${CONFIG.APP_SCHEME};package=${CONFIG.APP_PACKAGE};S.browser_fallback_url=${fallback};end`;
+  }
+
+  function render(data){
+    // Todo texto vindo da API entra via textContent — NUNCA innerHTML
+    // com dado externo. Isso é o que impede XSS: mesmo que "senderName"
+    // viesse com algo tipo "<script>...<\/script>", o navegador trata
+    // como texto puro, não como HTML/código.
+    const senderName = String(data.senderName || "Alguém").slice(0, 60);
+    const itemName = String(data.itemName || "um projeto").slice(0, 80);
+    const itemCount = Number.isFinite(data.itemCount) ? data.itemCount : null;
+    const itemSizeMB = Number.isFinite(data.itemSizeMB) ? data.itemSizeMB : null;
+    const senderProjectCount = Number.isFinite(data.senderProjectCount) ? data.senderProjectCount : null;
+
+    document.getElementById("senderName").textContent = senderName;
+    document.getElementById("h1Rest").textContent = "compartilhou um projeto com você";
+
+    const itemNameEl = document.getElementById("itemName");
+    itemNameEl.textContent = itemName;
+    itemNameEl.classList.remove("skel");
+
+    const metaParts = [];
+    if (itemCount !== null) metaParts.push(`${itemCount} itens`);
+    if (itemSizeMB !== null) metaParts.push(`${itemSizeMB} MB`);
+    const itemMetaEl = document.getElementById("itemMeta");
+    itemMetaEl.textContent = metaParts.join(" · ") || " ";
+    itemMetaEl.classList.remove("skel");
+
+    if (senderProjectCount !== null) {
+      document.getElementById("scaleText").textContent =
+        `${senderName} organiza ${senderProjectCount} projetos assim no Nexus Drive`;
+      document.getElementById("scaleBadge").style.display = "inline-flex";
+    }
+    // Se não vier senderProjectCount, o badge continua escondido —
+    // nunca inventamos um número aqui.
+
+    const intentUrl = buildAppIntentUrl(rawId);
+    document.getElementById("ctaBtn").href = intentUrl;
+    document.getElementById("ctaBtn").textContent = `Ver o que ${senderName} te mandou`;
+
+    document.getElementById("weakLinkBtn").addEventListener("click", function(){
+      // "Prefiro só abrir esse arquivo": leva pro link direto do Drive,
+      // não pro app. Só existe se a API mandar um link de visualização
+      // pronto — nunca construímos esse link no cliente a partir de um
+      // ID de arquivo cru, pra não vazar estrutura interna do Drive.
+      if (data.viewOnlyUrl) {
+        window.location.href = data.viewOnlyUrl;
+      }
+    });
+  }
+
+  async function init(){
+    if (isDemo) {
+      // Modo só pra pré-visualização durante o desenvolvimento — não
+      // chama nenhuma API real. Acesse com ?demo=1 na URL. Remover
+      // esse bloco (ou deixar, ele nunca ativa sozinho) quando a API
+      // real estiver no ar.
+      render({
+        senderName: "Marina",
+        senderProjectCount: 47,
+        itemName: "Thumbnails · Setembro",
+        itemCount: 12,
+        itemSizeMB: 8.4
+      });
+      return;
+    }
+
+    if (!idIsValid) {
+      showError("Link inválido. Confere se você copiou o endereço completo.");
+      return;
+    }
+
+    try {
+      const res = await fetch(`${CONFIG.API_BASE}/${encodeURIComponent(rawId)}`, {
+        method: "GET",
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.status === 404) {
+        showError("Esse link de compartilhamento não existe mais ou expirou. Peça pra pessoa compartilhar de novo.");
+        return;
+      }
+      if (!res.ok) {
+        showError("Não consegui carregar esse compartilhamento agora. Tenta de novo em instantes.");
+        return;
+      }
+
+      const data = await res.json();
+      render(data);
+    } catch (err) {
+      showError("Não consegui conectar agora. Confere sua internet e tenta de novo.");
+    }
+  }
+
+  init();
+})();
+</script>
+
+</body>
+</html>
