@@ -1,9 +1,9 @@
 {
-  "version": "3.0.189",
-  "versionCode": 230,
-  "notes": "Grade em quadrados de verdade. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.189-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.189-google.apk",
+  "version": "3.0.190",
+  "versionCode": 231,
+  "notes": "Loja: só instala se o .nexus estiver no ar. Sem arquivo, não finge compra.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.190-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.190-google.apk",
   "apkSize": 967649,
-  "apkSha256": "560d194626a6bf97afb3bb87ae6f3be8784d47fa9b07592a68410e52f8cc3fb2"
+  "apkSha256": "1580d2857da2c76ef865ed118997e48cdec1ad4864b4e9342c702dd25c61d94b"
 }
