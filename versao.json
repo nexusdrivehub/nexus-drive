@@ -1,9 +1,9 @@
 {
-  "version": "3.0.166",
-  "versionCode": 207,
-  "notes": "Nome no compartilhar igual ao Bom dia. Layout 132.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.166-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.166-google.apk",
-  "apkSize": 959457,
-  "apkSha256": "f86acea5a8e3966b786a3d9cc07c2cb587b3e2f2e5aa4cd99069c786da5c8178"
+  "version": "3.0.189",
+  "versionCode": 230,
+  "notes": "Grade em quadrados de verdade. Layout 132.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.189-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.189-google.apk",
+  "apkSize": 967649,
+  "apkSha256": "560d194626a6bf97afb3bb87ae6f3be8784d47fa9b07592a68410e52f8cc3fb2"
 }
