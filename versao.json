@@ -1,10 +1,10 @@
 {
-  "version": "3.0.194",
-  "versionCode": 235,
+  "version": "3.0.195",
+  "versionCode": 236,
   "mandatory": false,
-  "notes": "Correção no card de atualização: agora, ao tocar em \"Agendar atualização\", a tela de agendamento abre na hora — antes ela podia ficar escondida atrás do aviso em alguns aparelhos. Nada mais mudou.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.194-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.194-google.apk",
+  "notes": "Correção no card de atualização (o agendamento abre na hora) e verificação de segurança mais forte: o app confere se está rodando a cópia oficial antes de liberar os recursos Premium! Maa muda no seu uso do dia a dia.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.195-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.195-google.apk",
   "apkSize": 701332,
-  "apkSha256": "d286a8d720b97e8526865efd034a165af9aa1bd3740c0681499c15cc5b2ec60f"
+  "apkSha256": "81fa1afd78d8d981ce30e986544360e656a22813993de002cb7726807cc0c992"
 }
