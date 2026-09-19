@@ -1,10 +1,10 @@
 {
-  "version": "3.0.195",
-  "versionCode": 236,
+  "version": "3.0.196",
+  "versionCode": 237,
   "mandatory": false,
-  "notes": "Correção no card de atualização (o agendamento abre na hora) e verificação de segurança mais forte: o app confere se está rodando a cópia oficial antes de liberar os recursos Premium! Maa muda no seu uso do dia a dia.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.195-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.195-google.apk",
-  "apkSize": 701332,
-  "apkSha256": "81fa1afd78d8d981ce30e986544360e656a22813993de002cb7726807cc0c992"
+  "notes": "Se o Android pedir uma verificação antes de instalar, agora o card explica o que fazer: toque em “Verificar app” e siga normalmente — há um passo a passo dentro do app para quem travar. Também traz a correção do agendamento no card, a verificação de segurança da cópia oficial e o app mais leve.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.196-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.196-google.apk",
+  "apkSize": 705428,
+  "apkSha256": "fed9dd4931c37bd8ae4df955fc7b7d36ccd5d48a7d614f42a053bdca5d1429a4"
 }
