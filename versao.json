@@ -1,10 +1,10 @@
 {
-  "version": "3.0.193",
-  "versionCode": 234,
+  "version": "3.0.194",
+  "versionCode": 235,
   "mandatory": false,
-  "notes": "Novo: agende a atualização para o horário que preferir, com a opção de baixar só no Wi-Fi, e acompanhe ou cancele o agendamento a qualquer momento. Também corrigimos o aviso de nova versão e deixamos o app mais leve para baixar.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.193-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.193-google.apk",
+  "notes": "Correção no card de atualização: agora, ao tocar em \"Agendar atualização\", a tela de agendamento abre na hora — antes ela podia ficar escondida atrás do aviso em alguns aparelhos. Nada mais mudou.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.194-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.194-google.apk",
   "apkSize": 701332,
-  "apkSha256": "ebbc7554c047d67c355c67af5e533670cdfce018dcb5c20f3d28cf7e0f5b3997"
+  "apkSha256": "d286a8d720b97e8526865efd034a165af9aa1bd3740c0681499c15cc5b2ec60f"
 }
