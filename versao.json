@@ -1,10 +1,9 @@
 {
-  "version": "3.0.202",
-  "versionCode": 243,
+  "version": "3.0.208",
+  "versionCode": 249,
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.208-google.apk",
+  "apkSha256": "0f5bf88e2e26d469f93f6c4a594e3946932565694110e63de715f7d8b155f518",
+  "apkSize": 742292,
   "mandatory": false,
-  "notes": "O recibo de compra ficou de verdade com cara de comprovante: papel claro, picote, valor, data, quem comprou, a forma de pagamento (Pix ou cartão) e um código de barras de verdade, que carrega o código do próprio recibo.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.202-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.202-google.apk",
-  "apkSize": 717716,
-  "apkSha256": "1424c15756e4c87253aae776f61c4d8d2653228a6880614cb82118e3dbe36f2a"
+  "notes": "Novas telas oficiais: Boas-vindas com N vetorizado, Modal de Login Google em card flutuante e Perfil de Criador reformulado com autoridade e grid em 3 colunas."
 }
