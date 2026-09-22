@@ -1,9 +1,9 @@
 {
-  "version": "3.0.233",
-  "versionCode": 274,
-  "notes": "A-73: barra de abas opção B aprovada no mockup — ícones 26px, labels .72rem. Nada mais.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.233-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.233-google.apk",
+  "version": "3.0.235",
+  "versionCode": 276,
+  "notes": "A-75: exclusão de pasta some da tela na hora e estrela de fixar pinta — ndMarkDirty() antes do goScreen nos dois handlers (causa: goScreen não re-renderiza tela já pintada sem dirty).",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.235-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.235-google.apk",
   "apkSize": 2455425,
-  "apkSha256": "b2c76bfcf51beb370124f3e83f97c718f0c4179b3b82adbcda050b44531f53f6"
+  "apkSha256": "ff974f3636ec6df481b335d7ddaff7a56c7c4fa430231832499a0fc17fef39b6"
 }
