@@ -1,9 +1,9 @@
 {
-  "version": "3.0.235",
-  "versionCode": 276,
-  "notes": "A-75: exclusão de pasta some da tela na hora e estrela de fixar pinta — ndMarkDirty() antes do goScreen nos dois handlers (causa: goScreen não re-renderiza tela já pintada sem dirty).",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.235-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.235-google.apk",
+  "version": "3.0.236",
+  "versionCode": 277,
+  "notes": "A-76: card de atualização some quando o app já está na versão do repo. ND_CUR agora deriva de ND_VER (antes estava chumbado em 3.0.210).",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.236-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.236-google.apk",
   "apkSize": 2455425,
-  "apkSha256": "ff974f3636ec6df481b335d7ddaff7a56c7c4fa430231832499a0fc17fef39b6"
+  "apkSha256": "3e8939b601825536bca446a11b915f9912dfa84298001c773159058bba20164e"
 }
