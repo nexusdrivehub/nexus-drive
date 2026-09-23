@@ -1,9 +1,9 @@
 {
-  "version": "3.0.236",
-  "versionCode": 277,
-  "notes": "A-76: card de atualização some quando o app já está na versão do repo. ND_CUR agora deriva de ND_VER (antes estava chumbado em 3.0.210).",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.236-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.236-google.apk",
-  "apkSize": 2455425,
-  "apkSha256": "3e8939b601825536bca446a11b915f9912dfa84298001c773159058bba20164e"
+  "version": "3.0.243",
+  "versionCode": 284,
+  "notes": "Onboarding carrega em paralelo e só aparece pronto (sem flash do Pular). Animações do Claude iguais. 390×856.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.243-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.243-google.apk",
+  "apkSize": 2787273,
+  "apkSha256": "81c192770bd9c5bc4230973cd6845593a8cad831e127b5afde6e6e3786b29e31"
 }
