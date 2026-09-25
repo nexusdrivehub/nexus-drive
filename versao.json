@@ -1,9 +1,9 @@
 {
-  "version": "3.0.243",
-  "versionCode": 284,
-  "notes": "Onboarding carrega em paralelo e só aparece pronto (sem flash do Pular). Animações do Claude iguais. 390×856.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.243-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.243-google.apk",
-  "apkSize": 2787273,
-  "apkSha256": "81c192770bd9c5bc4230973cd6845593a8cad831e127b5afde6e6e3786b29e31"
+  "version": "3.0.250",
+  "versionCode": 291,
+  "notes": "Avaliações da Loja leem o Supabase (anon). Publicar no banco fica no Worker.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.250-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.250-google.apk",
+  "apkSize": 2791369,
+  "apkSha256": "a546e90fe33dc6754a10205d0b5fb468489ac6f2e32680296313bfd8cb7680fb"
 }
