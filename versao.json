@@ -1,9 +1,9 @@
 {
-  "version": "3.0.250",
-  "versionCode": 291,
-  "notes": "Avaliações da Loja leem o Supabase (anon). Publicar no banco fica no Worker.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.250-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.250-google.apk",
-  "apkSize": 2791369,
-  "apkSha256": "a546e90fe33dc6754a10205d0b5fb468489ac6f2e32680296313bfd8cb7680fb"
+  "version": "3.0.276",
+  "versionCode": 317,
+  "notes": "Novo avatar padrão no Perfil (quando não há foto ou login).",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.276-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.276-google.apk",
+  "apkSize": 2836502,
+  "apkSha256": "0985fb8873b01832c333087bf779955553ce4163126e57a97f515803be794998"
 }
