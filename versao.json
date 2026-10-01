@@ -1,9 +1,9 @@
 {
-  "version": "3.0.286",
-  "versionCode": 327,
-  "notes": "Restaura Slowed/Reverb/Nightcore ao som original (IR 2.6s estéreo, ganhos 0.9/0.25/0.5, feedback 0.35) mas com ramos sob demanda — sem estalo mesmo em celular fraco. Novos efeitos 100% reais com workaround de CPU: Phonk multibanda (grave distorcido, agudo limpo), Lo-fi com wow/flutter (delay modulado) + vinil, 8D HRTF circular real (6.6s/volta, passa de um fone pro outro), Sidechain com kick detection via beat markers. Bypass total pra todos.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.286-google.apk",
-  "apkSize": 2840646,
-  "apkSha256": "1c2b5ab8de7ddc7357d8c275fc36afb133ec9ce050a56b3448aa089864e7d042"
+  "version": "3.0.320",
+  "versionCode": 361,
+  "notes": "Novo fluxo de edição de fotos (Importar, Análise, Visual, Comparar e Exportar) com abertura direta nos cards de projeto e Importados, palco 16:9 independente e layout 100% preenchido.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.320-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.320-google.apk",
+  "apkSize": 3000488,
+  "apkSha256": "240c028bb0041c26258007446a10753c80bd505d91fe53481dde4fb5bd9efd74"
 }
