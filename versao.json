@@ -1,9 +1,10 @@
 {
-  "version": "3.0.320",
-  "versionCode": 361,
-  "notes": "Novo fluxo de edição de fotos (Importar, Análise, Visual, Comparar e Exportar) com abertura direta nos cards de projeto e Importados, palco 16:9 independente e layout 100% preenchido.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.320-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.0.320-google.apk",
-  "apkSize": 3000488,
-  "apkSha256": "240c028bb0041c26258007446a10753c80bd505d91fe53481dde4fb5bd9efd74"
+  "version": "3.1.327",
+  "versionCode": 368,
+  "notes": "v3.1.327 — Sonda muda de desempenho (Fase 0, invisível, sem UI) + remoção do HTML velho do pacote (download 12,5% menor) + regras de backup que mantêm o cofre fora da nuvem do Google. Nenhum visual alterado; projetos, ajustes e login continuam intactos ao instalar por cima.",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/dl/NexusDrive-v3.1.327-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/dl/NexusDrive-v3.1.327-google.apk",
+  "apkSize": 2627830,
+  "apkSha256": "ccd10dea20d0ddc5619af341652dc735db70cae94827ef458d8d214f785d2cde",
+  "_status": "RASCUNHO LOCAL — NÃO publicado. A Pages ainda serve 3.0.320/vc361. Só vira OTA quando a dona publicar."
 }
