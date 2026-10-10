@@ -2,9 +2,9 @@
   "version": "3.1.360",
   "versionCode": 400,
   "notes": "TESTE INTERNO (não é versão oficial). Serve só para checar o card e o agendamento.",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.351-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.351-google.apk",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/teste/NexusDrive-v3.1.352-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/teste/NexusDrive-v3.1.352-google.apk",
   "apkSize": 2648310,
-  "apkSha256": "3400b040d51cf99016c922da1f4b6d6153a86cafde1790b176d93598134dd8dd",
+  "apkSha256": "a42788fde93c4103285fcbafd6525c60dc35bd1d835a1f07f9a9c144a6a2f737",
   "mandatory": false
 }
