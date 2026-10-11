@@ -1,0 +1,146 @@
+name: Publicar APK do Nexus Drive
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Versão, exemplo 3.1.366"
+        required: true
+        type: string
+      version_code:
+        description: "Código da versão, exemplo 407"
+        required: true
+        type: string
+      notes:
+        description: "Notas da atualização"
+        required: true
+        type: string
+      confirm_publish:
+        description: "Confirmo que testei e aprovei este APK"
+        required: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-apk
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: inputs.confirm_publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Validar APK e calcular hash
+        id: apk
+        env:
+          VERSION: ${{ inputs.version }}
+          VERSION_CODE: ${{ inputs.version_code }}
+        run: |
+          set -euo pipefail
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+            echo "Versão inválida."
+            exit 1
+          }
+          [[ "$VERSION_CODE" =~ ^[0-9]+$ ]] || {
+            echo "Código da versão inválido."
+            exit 1
+          }
+
+          APK="release-inbox/NexusDrive-v${VERSION}-teste.apk"
+          if [ ! -f "$APK" ]; then
+            echo "APK não encontrado: $APK"
+            echo "Envie o APK aprovado para a pasta release-inbox."
+            exit 1
+          fi
+
+          unzip -t "$APK" >/dev/null
+          echo "path=$APK" >> "$GITHUB_OUTPUT"
+          echo "size=$(stat -c%s "$APK")" >> "$GITHUB_OUTPUT"
+          echo "sha=$(sha256sum "$APK" | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Publicar Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+          NOTES: ${{ inputs.notes }}
+          APK_PATH: ${{ steps.apk.outputs.path }}
+        run: |
+          set -euo pipefail
+          TAG="v${VERSION}"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "A Release $TAG já existe. Interrompendo."
+            exit 1
+          fi
+
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+            echo "A tag $TAG já existe. Interrompendo."
+            exit 1
+          fi
+
+          gh release create "$TAG" "$APK_PATH" \
+            --title "$TAG" \
+            --notes "$NOTES"
+
+      - name: Atualizar versao.json
+        env:
+          VERSION: ${{ inputs.version }}
+          VERSION_CODE: ${{ inputs.version_code }}
+          NOTES: ${{ inputs.notes }}
+          APK_SIZE: ${{ steps.apk.outputs.size }}
+          APK_SHA: ${{ steps.apk.outputs.sha }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          version = os.environ["VERSION"]
+          tag = "v" + version
+          filename = f"NexusDrive-v{version}-teste.apk"
+          url = (
+              "https://github.com/nexusdrivehub/nexus-drive/"
+              f"releases/download/{tag}/{filename}"
+          )
+
+          path = Path("versao.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          data.update({
+              "version": version,
+              "versionCode": int(os.environ["VERSION_CODE"]),
+              "notes": os.environ["NOTES"],
+              "url": url,
+              "apkUrl": url,
+              "apkSize": int(os.environ["APK_SIZE"]),
+              "apkSha256": os.environ["APK_SHA"],
+              "mandatory": False
+          })
+          path.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+          PY
+
+          git add versao.json
+          git commit -m "Update versao.json"
+          git push origin HEAD:main
+
+      - name: Verificar Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          gh release view "v${VERSION}" --json name,tagName,assets
+          echo "Release criada. Verifique o site e o atualizador antes de anunciar."
