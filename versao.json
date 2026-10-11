@@ -1,10 +1,10 @@
 {
-  "version": "3.1.363",
-  "versionCode": 404,
-  "notes": "Card de atualização no novo desenho;Baixando, baixada, agendar e ajuda no novo desenho;Mesmos botões e fluxo de antes",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.363-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.363-google.apk",
+  "version": "3.1.364",
+  "versionCode": 405,
+  "notes": "Cartão de atualização com arrasto para fechar e cartão de agendar mais largo;Versão de teste do fluxo a partir da 3.1.363",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.364-github.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.364-github.apk",
   "apkSize": 2656502,
-  "apkSha256": "766441e4b1537e0f1e2e737f03e16e0be3e309fb432cc2f9cf4d04b4bd164a9f",
+  "apkSha256": "8234d2e5264a93e28d4800944766a615224170f3e07dfc7802579cd4943e9b4c",
   "mandatory": false
 }
