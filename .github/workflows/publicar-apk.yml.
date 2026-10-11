@@ -1,0 +1,159 @@
+name: Publicar APK do Nexus Drive
+
+on:
+workflow_dispatch:
+inputs:
+version:
+description: "Versão, por exemplo 3.1.366"
+required: true
+type: string
+version_code:
+description: "Código da versão, por exemplo 407"
+required: true
+type: string
+notes:
+description: "Notas da atualização"
+required: true
+type: string
+confirm_publish:
+description: "Confirmo que testei e aprovei este APK"
+required: true
+type: boolean
+
+permissions:
+contents: write
+
+concurrency:
+group: nexus-drive-publish
+cancel-in-progress: false
+
+jobs:
+publish:
+if: inputs.confirm_publish == true
+runs-on: ubuntu-latest
+
+steps:
+  - name: Baixar repositório
+    uses: actions/checkout@v4
+
+  - name: Validar dados e APK
+    id: apk
+    env:
+      VERSION: ${{ inputs.version }}
+      VERSION_CODE: ${{ inputs.version_code }}
+    run: |
+      set -euo pipefail
+
+      [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+        echo "Versão inválida."
+        exit 1
+      }
+
+      [[ "$VERSION_CODE" =~ ^[0-9]+$ ]] || {
+        echo "Código de versão inválido."
+        exit 1
+      }
+
+      APK="release-inbox/NexusDrive-v${VERSION}-teste.apk"
+
+      if [ ! -f "$APK" ]; then
+        echo "APK não encontrado: $APK"
+        echo "Envie o APK aprovado para release-inbox antes de executar."
+        exit 1
+      fi
+
+      if ! unzip -t "$APK" >/dev/null; then
+        echo "O arquivo não é um APK/ZIP válido."
+        exit 1
+      fi
+
+      SIZE=$(stat -c%s "$APK")
+      SHA=$(sha256sum "$APK" | cut -d' ' -f1)
+
+      echo "path=$APK" >> "$GITHUB_OUTPUT"
+      echo "size=$SIZE" >> "$GITHUB_OUTPUT"
+      echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+  - name: Verificar se a versão já existe
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+    run: |
+      set -euo pipefail
+      TAG="v${VERSION}"
+
+      if gh release view "$TAG" >/dev/null 2>&1; then
+        echo "Já existe uma Release com essa tag."
+        exit 1
+      fi
+
+      if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+        echo "A tag já existe."
+        exit 1
+      fi
+
+  - name: Criar Release e anexar APK
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+    run: |
+      set -euo pipefail
+      gh release create "v${VERSION}" \
+        "${{ steps.apk.outputs.path }}" \
+        --title "v${VERSION}" \
+        --notes "${{ inputs.notes }}"
+
+  - name: Atualizar versao.json após a publicação
+    env:
+      VERSION: ${{ inputs.version }}
+      VERSION_CODE: ${{ inputs.version_code }}
+      NOTES: ${{ inputs.notes }}
+      APK_SIZE: ${{ steps.apk.outputs.size }}
+      APK_SHA: ${{ steps.apk.outputs.sha }}
+      GH_TOKEN: ${{ github.token }}
+    run: |
+      set -euo pipefail
+
+      python3 - <<'PY'
+      import json, os
+      from pathlib import Path
+
+      version = os.environ["VERSION"]
+      tag = "v" + version
+      filename = f"NexusDrive-v{version}-teste.apk"
+      url = f"https://github.com/${{ github.repository }}/releases/download/{tag}/{filename}"
+
+      path = Path("versao.json")
+      data = json.loads(path.read_text(encoding="utf-8"))
+
+      data.update({
+          "version": version,
+          "versionCode": int(os.environ["VERSION_CODE"]),
+          "notes": os.environ["NOTES"],
+          "url": url,
+          "apkUrl": url,
+          "apkSize": int(os.environ["APK_SIZE"]),
+          "apkSha256": os.environ["APK_SHA"],
+          "mandatory": False
+      })
+
+      path.write_text(
+          json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+          encoding="utf-8"
+      )
+      PY
+
+      git config user.name "github-actions[bot]"
+      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      git add versao.json
+      git commit -m "Update versao.json"
+      git push origin HEAD:main
+
+  - name: Verificar Release
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+    run: |
+      set -euo pipefail
+      gh release view "v${VERSION}" --json name,tagName,assets
+      echo "Release publicada. Confira o site antes de anunciar a atualização."
