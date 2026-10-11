@@ -1,10 +1,10 @@
 {
-  "version": "3.1.353",
-  "versionCode": 394,
+  "version": "3.1.355",
+  "versionCode": 396,
   "notes": "",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.353-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.353-google.apk",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.355-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.355-google.apk",
   "apkSize": 2648310,
-  "apkSha256": "db3ea475e45b8a69244fd97dc35d6e720e67162a8cfa068e2baa82632eb206a4",
+  "apkSha256": "5735aaf99618df105f247b583c8dbfb8c1e0714be9e8ed6b228f83bcf498a07d",
   "mandatory": false
 }
