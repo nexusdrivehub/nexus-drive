@@ -1,10 +1,10 @@
 {
-  "version": "3.1.365",
-  "versionCode": 406,
-  "notes": "Card de atualização da home com versão atual e nova;Card centralizado com arrasto para fechar;Atualização sem folha por trás",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.365-teste.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.365-teste.apk",
+  "version": "3.1.366",
+  "versionCode": 407,
+  "notes": "Versão de teste para atualizar a partir da 3.1.365;Mesmo conteúdo da 3.1.365",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.366-teste.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.366-teste.apk",
   "apkSize": 2656502,
-  "apkSha256": "d08aa8b1bda3bb070d26e642982bf1d7cbc3118bfa1c11927c73b7d183ced30e",
+  "apkSha256": "5a864bca9da840ba325b408edfa8e538a7352fc45709e8e662deb1b08823866c",
   "mandatory": false
 }
