@@ -1,10 +1,10 @@
 {
-  "version": "3.1.362",
-  "versionCode": 403,
-  "notes": "Correção no link que impedia abrir a Loja de fora do app;Aviso de atualização chega certo agora",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.362-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.362-google.apk",
-  "apkSize": 2652406,
-  "apkSha256": "f4c6bec1262adf2636e751a6a132db2321eba53cb986421717c3e9a345832d78",
+  "version": "3.1.363",
+  "versionCode": 404,
+  "notes": "Card de atualização no novo desenho;Baixando, baixada, agendar e ajuda no novo desenho;Mesmos botões e fluxo de antes",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.363-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.363-google.apk",
+  "apkSize": 2656502,
+  "apkSha256": "766441e4b1537e0f1e2e737f03e16e0be3e309fb432cc2f9cf4d04b4bd164a9f",
   "mandatory": false
 }
