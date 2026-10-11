@@ -1,10 +1,10 @@
 {
-  "version": "3.1.360",
-  "versionCode": 401,
-  "notes": "",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.360-google.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.360-google.apk",
-  "apkSize": 2648310,
-  "apkSha256": "157a1e78e58659e88082ed287f7a71934809ba4cf2691c03935150744acb5924",
+  "version": "3.1.361",
+  "versionCode": 402,
+  "notes": "Correção no link que impedia abrir a Loja de fora do app;Aviso de atualização chega certo agora",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.361-google.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.361-google.apk",
+  "apkSize": 2652406,
+  "apkSha256": "83b904f29556f815fe8d692886650329c0e8ab01cb680cff4c3a1232ea148eb7",
   "mandatory": false
 }
