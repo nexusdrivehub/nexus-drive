@@ -1,10 +1,10 @@
 {
-  "version": "3.1.366",
-  "versionCode": 407,
-  "notes": "Versão de teste para atualizar a partir da 3.1.365;Mesmo conteúdo da 3.1.365",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.366-teste.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.366-teste.apk",
+  "version": "3.1.367",
+  "versionCode": 408,
+  "notes": "Card da home com agendamento (alterar e cancelar);Card da home embaixo;Baixando e baixada no centro",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.367-teste.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.367-teste.apk",
   "apkSize": 2656502,
-  "apkSha256": "5a864bca9da840ba325b408edfa8e538a7352fc45709e8e662deb1b08823866c",
+  "apkSha256": "ac570dec150ae1e95e6f82ffef39ae06734dca9ac32f86efc6d8f36c7ef45047",
   "mandatory": false
 }
