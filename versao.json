@@ -1,10 +1,10 @@
 {
-  "version": "3.1.364",
-  "versionCode": 405,
-  "notes": "Cartão de atualização com arrasto para fechar e cartão de agendar mais largo;Versão de teste do fluxo a partir da 3.1.363",
-  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.364-github.apk",
-  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.364-github.apk",
+  "version": "3.1.365",
+  "versionCode": 406,
+  "notes": "Card de atualização da home com versão atual e nova;Card centralizado com arrasto para fechar;Atualização sem folha por trás",
+  "url": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.365-teste.apk",
+  "apkUrl": "https://nexusdrivehub.github.io/nexus-drive/NexusDrive-v3.1.365-teste.apk",
   "apkSize": 2656502,
-  "apkSha256": "8234d2e5264a93e28d4800944766a615224170f3e07dfc7802579cd4943e9b4c",
+  "apkSha256": "d08aa8b1bda3bb070d26e642982bf1d7cbc3118bfa1c11927c73b7d183ced30e",
   "mandatory": false
 }
